@@ -1,5 +1,5 @@
 import React from 'react';
-import './Programs.css';
+import './Programs.scss';
 import { programsData } from '../../data/programsData';
 import RightArrow from '../../assets/rightArrow.png';
 
@@ -23,7 +23,7 @@ const Programs = () => {
 
             <div className="program-categories">
                 {programsData.map((program, index) => (
-                    <div className="category">
+                    <div key={index} className="category">
                         {program.image}
                         <span>{program.heading}</span>
                         <span>{program.details}</span>
