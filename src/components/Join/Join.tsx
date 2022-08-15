@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import './Join.css';
+import './Join.scss';
 import emailjs from '@emailjs/browser';
 
 const Join = () => {
@@ -8,6 +8,7 @@ const Join = () => {
    const sendEmail = (e: any) => {
       e.preventDefault();
     
+      //@ts-ignore
       emailjs.sendForm('service_extzqa9', 'template_5fbt3fr', form.current, 'VLwg1ltOWvnCYAiK_')
         .then((result: any) => {
         console.log(result.text);
